@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from libs.database import Db
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 db = Db("employees.db")
 tb_name = "employees"
 
